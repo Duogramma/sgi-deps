@@ -1,16 +1,964 @@
-.table > tbody > tr > td {
-    color:#444;
-    border-color:#c7c1c1;
+/*****************************************************
+	Mensagens do sistema
+*****************************************************/
+div.erro * {
+	margin:0;
+	padding:0;
 }
-.table, .table thead tr th{
-    border:solid 1px #c7c1c1;    
+
+div.erro {
+	background:#E6C0C0 url(/guarida/images/erro.png) no-repeat 10px center;
+	border:3px solid #DE7A7B;
+	color:#CC0000;
+	display:block;
+	font-weight:bold;
+	min-height:30px;
+	margin-bottom:10px;
+	padding-left:50px;
+	padding-bottom:10px;
+	margin-top:10px;
+	padding-top:10px;
 }
-.panel-default {
-  border-color: #c7c1c1;  
+div.erro a{
+	text-decoration:none;
+	color:#FFFFFF;
+	font-weight:bold;
 }
-.panel-default > .panel-heading, .panel-default > .panel-footer {
-  color: #373e4a;
-  background-color: #c7c1c1;
-  border-color: #c7c1c1;
+
+div.sucesso * {
+	margin:0;
+	padding:0;
 }
-.form-control{border-color: #c7c1c1;}
+
+div.sucesso {
+	background:#C3D2E5 url(/guarida/images/sucesso.png) no-repeat 10px center;
+	border:3px solid #84A7DB;
+	color:#0055BB;
+	display:block;
+	font-weight:bold;
+	min-height:30px;
+	margin-bottom:10px;
+	padding-left:50px;
+	padding-bottom:10px;
+	margin-top:10px;
+	padding-top:10px;
+}
+
+div.sucesso a{
+	text-decoration:none;
+	font-weight:bold;
+	color:red;
+}
+
+div.alerta * {
+	margin:0;
+	padding:0;
+}
+
+div.alerta {
+	background:#EFE7B8 url(/guarida/images/alerta.png) no-repeat 10px center;
+	border:3px solid #F0DC7E;
+	color:#CC0000;
+	display:block;
+	font-weight:bold;
+	min-height:30px;
+	margin-bottom:10px;
+	padding-left:50px;
+	padding-bottom:10px;
+	margin-top:10px;
+	padding-top:10px;
+}
+
+div.alerta a{
+	text-decoration:none;
+	font-weight:bold;
+	color:red;
+}
+div.erro div.debug_close {
+	padding-right:30px;
+	display:block;
+	text-align:right;
+}
+
+div.erro div.debug_close a#msg_detalhes{
+	text-align:right;
+	color:#000000;
+}
+
+div.erro div.debug_open {
+	margin-top:10px;
+	margin-right:20px;
+	padding:5px;
+	background-color:#EFE7B8 ;
+	border:3px solid #F0DC7E;
+	color:#CC0000;
+}
+
+div.erro div.debug_open p {
+	margin-top:10px;
+
+}
+div.erro div.debug_open a#msg_detalhes{
+	text-align:right;
+	color:#000000;
+	float:right;
+}
+/*************************************
+	Tabela Padrao
+***************************************/
+div.div_tabela_padrao * {
+	margin:0;
+	padding:0;
+}
+
+div.div_tabela_padrao {
+	width:100%;
+	text-align:center;
+}
+
+div.div_tabela_padrao h3{
+	text-decoration:underline;	
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000;
+	font-size:14px;
+}
+
+table.tabela_padrao * {
+	margin:0;
+	padding:0;
+}
+
+table.tabela_padrao {
+	border-collapse:collapse;
+	margin:20px auto;
+	font-family:Arial;
+	background-color: #CDCDCD;
+	border:#cdcdcd solid 1px; 
+	font-size: 12px;
+	text-align: left;
+}
+table.tabela_padrao , table.tabela_padrao  tr th , table.tabela_padrao  tr td {
+	 border:#999999 solid 1px;  
+
+}
+
+table.tabela_padrao tr th a,table.tabela_padrao tr th  {
+	padding:3px;
+	text-decoration:none;
+	color:#000000;
+	text-align:center;
+}
+
+table.tabela_padrao tr th a:hover {
+	text-decoration:underline;	
+}
+
+table.tabela_padrao tr th  {
+	background-color:#D0D0D0;
+	border: 1px solid #999999; 
+	text-align:center;
+	padding:3px;
+}
+
+table.tabela_padrao td {
+	color: #000000;
+	background-color: #FFF;
+	vertical-align: top;
+	text-align:left;
+	padding:3px;
+}
+table.tabela_padrao  tr.linha td {
+	background-color:#EBEBEB;
+	padding:3px;
+}
+
+table.tabela_padrao  tr.linha_destaque td {
+	background-color:#FBD6A4;
+	font-weight:bold;
+	padding:3px;
+	color:#990000;
+}
+
+table.tabela_padrao tr td.sim {
+	color:#006600;
+	font-weight:bold;
+	text-align:center;
+}
+table.tabela_padrao tr td.nao {
+	color:maroon;
+	text-align:center;
+}
+
+
+
+/***********************************************************
+	ABAS
+************************************************************/
+ul.abas * {
+	margin:0;
+	padding:0;
+}
+
+ul.abas {
+	border-bottom:#000000 solid 1px;
+	padding-bottom:3px;
+}
+ul.abas li{
+	list-style:none;
+	display:inline;
+	margin-right:1px;
+}
+
+ul.abas li a.ativada {
+	background-color:#990000;
+	text-decoration:none;
+	color:#FFFFFF;
+	padding:3px;
+	-moz-border-radius-topleft:6px;
+    -moz-border-radius-topright:6px;
+}
+
+ul.abas li a.desativado {
+	background-color:#CCCCCC;
+	text-decoration:none;
+	color:#666666;
+	padding:2px;
+	-moz-border-radius-topleft:6px;
+    -moz-border-radius-topright:6px;
+	font-size:12px;
+}
+
+/***************************************
+	Slider
+****************************************/
+.sgi_accordion * {
+	margin:0;
+	padding:0;
+}
+p.slide_header * {
+	margin:0;
+	padding:0;
+}
+p.slide_header {
+	border:#CCCCCC solid 1px;
+	background-color: #F6F6F6;
+	font-size: 8pt;
+	padding: 5px;
+	cursor:pointer;
+	font-weight:bold;
+	color:#222;
+}
+
+p.slide_header_ativo * {
+	margin:0;
+	padding:0;
+}
+
+p.slide_header_ativo {
+	border:#cdcdcd solid 1px;
+	background-color: #E0E0E0;
+	font-size: 8pt;
+	padding: 5px;
+	cursor:pointer;
+	font-weight:bold;
+	color:#222;
+}
+
+div.slide_conteudo * {
+	margin:0;
+	padding:0;
+}
+
+div.slide_conteudo {
+	border:#cdcdcd solid 1px;
+	padding:5px;
+	overflow:hidden;
+}
+
+/***************************************
+	FORM PADRAO
+****************************************/
+.form_padrao{
+	margin:0 auto;	
+	width:750px;
+}
+
+.form_padrao fieldset{
+  	background-color:#F2F2F2;
+	border-width:2px 2px 2px 10px;
+	border-style:solid;
+	border-color: #336699;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	margin-top:20px;
+	margin-bottom:20px;
+	margin-left:auto;
+	margin-right:auto;
+	width:720px;
+	position:relative;
+	display:block;
+	padding: 3px 10px 10px 10px;
+}
+
+.form_padrao fieldset legend{	
+	background-color:#ecefcb;
+	border-width:1px 1px 1px 10px;
+	border-color: #990000;
+	border-style:solid;
+	color:#000000;
+	font-weight:bold;
+	text-transform:uppercase;
+	font-size:90%;
+	text-align:center;
+	padding:3px 5px;
+	margin:0px 0px 10px -40px;
+	position:absolute;
+	top: -14px;
+	left: 5px;
+}
+.form_padrao label{
+	color: #000000;
+	font-size:90%;
+	font-weight:bold;
+	display:block;
+	float:left;
+	width:150px;
+	text-align:right;
+	margin:4px 5px 0px 0px;
+}
+
+.form_padrao input[type=text], .form_padrao select{
+	background-color:  #F2F2F2;
+	margin:2px 0px 0px 0px;
+	border-width: 0px 0px 1px 0px;
+	border-style: solid solid dotted solid;
+	border-color:#999999;
+	width:490px;
+	color:#000000;
+	font-family:"Courier New", Courier, mono;
+	padding:1px 2px;
+}
+
+
+
+.form_padrao input[type=checkbox]{
+	margin-top:5px;
+}
+
+.form_padrao fieldset textarea{
+	width:493px;
+	height:80px;
+	border:#336699 solid 1px;
+	margin-top:8px;
+}
+
+/******************************
+	ALERT
+*************************************/
+.sgiAlert *{
+	margin:0;
+	padding:0;
+}
+
+.boxAlertSGI {
+	height:100%;
+	opacity:.3;
+	filter: alpha(opacity=15);
+	background:#000000;
+	width:100%;
+/*	z-index:500;*/
+	position:fixed;
+	top:0;
+	left:0;
+}
+
+.sgiAlert {
+	position:fixed;
+	z-index:501;
+	background-color:#FFFFFF;
+	width:350px;
+	top:200px;
+	left:350px;
+	text-align:center;
+	border:#000000 solid 1px;
+}
+
+.sgiAlert h5 {
+	padding:5px;
+	background-color:#990000;
+	text-align:left;
+	color:#FFFFFF;
+	font-weight:bold;
+}
+
+.sgiAlertConteudo {
+	color:#000000;
+	font-weight:bold;
+	padding:15px;
+	font-size:12px;
+	text-align:left;
+}
+
+.sgiAlertBtnOk {
+	padding:10px;
+	text-align:right;
+}
+
+.sgiAlertBtnOk input{
+	width:80px;
+	border:#000000 solid 1px;
+	padding:3px;
+	font-weight:bold;
+}
+
+/****************************************
+	PAGINATOR
+*****************************************/
+
+.paginadorAtual {
+	color:#000;
+}
+
+.paginadorPadrao {
+	color:#F00;
+	text-decoration:none;
+}
+
+/*******************************************
+	PAINEL CONTROLE
+********************************************/
+.preloaderPainelControle {
+
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    height: 15px;
+    background-color: #336699;
+    color: #FFF;
+    font-weight: bold;
+    padding: 10px;
+
+}
+
+.painelControle *{
+	margin:0;
+	padding:0;	
+}
+
+.painelControle {
+	position:fixed;
+	bottom:0px;
+	right:0px;	
+	margin:1px;
+}
+.painelControle #pcArrow {
+    height: 35px;
+}
+.painelControle #pcArrow a {
+        text-align:center;
+	text-decoration:none;
+	font-weight:bold;
+        color: #FFF;
+        background-color:#336699;
+        display: block;
+        padding:10px;
+	width:140px;
+        float: right;
+}
+
+.painelControle #pcContent{
+	width:400px;
+	height:315px;
+	background-color:#FFF;	
+	padding:5px;
+        display:none;
+        border: solid 1px #336699;
+}
+
+.painelControle #pcContent #pcHeader {
+	height:30px;
+	background-color:#336699;
+        text-align: center;
+        bottom:0;
+}
+.painelControle #pcContent #pcFooter {
+	height:30px;
+	background-color:#336699;
+        border-bottom:solid 1px #FFF;
+        text-align: center;
+}
+
+.painelControle #pcContent #pcHeader ul li,
+.painelControle #pcContent #pcFooter ul li{
+    list-style: none;
+    float: left;
+}
+
+.painelControle #pcContent #pcHeader ul li a.pcMenuFechado,
+.painelControle #pcContent #pcFooter ul li a.pcMenuFechado{
+	font-weight:bold;
+	color:#FFF;
+        background-color: #336699;
+	text-decoration:none;
+	display:block;
+	
+        
+	padding:5px 10px 5px 10px;
+}
+
+.painelControle #pcContent #pcHeader ul li a.pcMenuAberto,
+.painelControle #pcContent #pcFooter ul li a.pcMenuAberto{
+	color:#336699;
+        background-color: #FFF;
+        border-bottom: #FFF solid 2px;
+        border-left: #CCC solid 1px;
+        border-right: #CCC solid 1px;
+        border-top: #CCC solid 1px;
+        padding:5px 9px 5px 9px;
+}
+
+.painelControle #pcContent #pcCenter {
+	height:240px;	
+	padding:5px;
+}
+
+.painelControle #pcContent #pcCenter ul li {
+	list-style:none;	
+	float:left;
+	margin:3px;
+}
+
+.painelControle #pcContent #pcCenter ul li a {
+	text-decoration:none;
+	text-align:center;
+	width:60px;
+        height: 70px;
+	display:block;
+	padding:5px;
+	font-weight:bold;
+}
+
+.painelControle #pcContent .pcConteudoFechado {
+    display: none;
+}
+
+.painelControle #pcContent .pcConteudoAberto {
+    display: block;
+    
+    background-color: #ffffff;
+    border-bottom: #CCC solid 1px;
+    border-left: #CCC solid 1px;
+    border-right: #CCC solid 1px;
+    border-top: none;
+    padding:5px;
+    height:240px;
+}
+
+.painelControle #pcContent .pcHeaderAccordionAtivo {
+    border:#cdcdcd solid 1px;
+    background-color: #FFF;
+    font-size: 8pt;
+    padding: 5px;
+    cursor:pointer;
+    font-weight:bold;
+    color:#990000;
+}
+
+.painelControle #pcContent .pcHeaderAccordionInativo {
+    border:#cdcdcd solid 1px;
+    background-color: #E0E0E0;
+    font-size: 8pt;
+    padding: 5px;
+    cursor:pointer;
+    font-weight:bold;
+    color:#222;
+}
+
+.painelControle #pcContent .pcFilhoAccordionAtivo {
+
+    padding: 10px;
+    background-color: #f6f6f6;
+    display: none;
+
+}
+
+.painelControle #pcContent .pcFilhoAccordionAtivo li{
+    margin-bottom: 5px;
+    margin-left: 25px;
+    list-style:url(/guarida/images/list_style_menu_pc.png);
+}
+
+.painelControle #pcContent .pcFilhoAccordionAtivo li a{
+    font-weight: bold;
+    color: #336699;
+    text-decoration: none;
+}
+.painelControle #pcContent .pcFilhoAccordionAtivo li:hover{margin-left:30px;}
+
+.painelControle #pcContent .pcFilhoAccordionAtivo li a:hover{
+	color: #990000;	
+	text-decoration:underline;
+}
+
+.painelControle #pcContent .pcFilhoAccordionInativo{
+    display: none;
+}
+
+.painelControle #pcContent #pcHeaderMensagens #pcHeaderMensagensTop,
+.painelControle #pcContent #pcHeaderMensagens #pcHeaderMensagensBottom{
+	padding:5px;
+}
+.painelControle #pcContent #pcHeaderMensagens #pcHeaderMensagensBottom{display: none;}
+.painelControle #pcContent #pcHeaderMensagens #pcHeaderMensagensBottom,
+.painelControle #pcContent #pcHeaderMensagens #pcHeaderMensagensBottom a{
+    background-color: #336699;
+    color: #fff;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.painelControle #pcContent #pcHeaderMensagensTop a{
+        color:#990000;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.painelControle #pcContent #pcHeaderMensagens #pcHeaderMensagensBottom input{
+	color:#333;
+	font-weight:bold;
+	height:15px;
+	border:#336699 solid 1px; 
+	font-size:12px;
+}
+
+.painelControle #pcContent #pcBodyMensagens table{
+	border-collapse:collapse;	
+}
+
+.painelControle #pcContent #pcBodyMensagens table tr{
+	border-bottom:solid #336699 1px;
+}
+
+.painelControle #pcContent #pcBodyMensagens table tr td{
+	color:#000;
+	font-style:italic;
+	font-weight:600;
+	font-family:Arial, Helvetica, sans-serif
+}
+
+.painelControle #pcContent #pcBodyMensagens table tr td a{
+	color:#336699;
+	font-weight:bold;
+	font-style:normal;
+	text-decoration:none;
+}
+.painelControle #pcContent #pcMensagens a:hover{text-decoration:underline}
+
+.painelControle #pcContent #pcBodyMensagens table tr td,.painelControle #pcContent #pcBodyMensagens table tr th {
+	padding:5px;
+}
+
+.pcBox {
+	position:absolute;
+	top:10px;
+	background-color:#FFF;
+	left:100px;
+	border:solid 8px #336699;	
+	width:1000px;
+	display:none;
+}
+.pcBox #pcHeaderBox{
+	height:60px;
+	position:relative;	
+	padding:5px;
+}
+
+.pcBox #pcHeaderBox hr {
+	height:5px;
+	background-color:#336688;
+}
+
+.pcBox #pcHeaderBox p {
+	position: absolute;
+	top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 65%;
+    text-align: center;
+    font-size: 2.1em;
+    font-weight: bold;
+    color: #336699;
+    padding-top: 2%;
+}
+
+.pcBox #pcFecharBox {
+	display:block;
+	background:url(/guarida/images/close.png) no-repeat;
+	width:35px;
+	height:35px;
+	position:absolute;
+	right:5px;
+	top:5px;
+}
+
+.pcBox #pcContentBox {
+	margin:5px;
+}
+
+.pcPreloaderSistema{
+	background:	url(/guarida/images/36.gif) no-repeat top left;
+	width:128px;
+	height:15px;
+	position:absolute;
+	top:250px;
+	left:250px;
+	/*z-index:1100;*/
+}
+
+.painelControle #pcContent #mensagensPainelControle #pcMensagens
+#pcHeaderMensagens #pcHeaderMensagensTop a.pcBtnFIltroMensagensInativo {
+    color: #336699;
+}
+
+.painelControle #pcContent #mensagensPainelControle #pcMensagens
+#pcHeaderMensagens #pcHeaderMensagensTop a.pcBtnFIltroMensagensAtivo img{
+    color: #FFF;
+}
+
+#pcEnviarMensagem{
+	padding:5px;
+}
+
+#pcEnviarMensagem label{
+	width:150px;
+	float:left;
+	font-weight:bold;
+	text-align:right;
+	margin-right:5px;
+	margin-bottom:3px;
+}
+
+#pcEnviarMensagem input[type=text],#pcEnviarMensagem textarea{
+	width:400px;
+	border:solid 1px #336699;
+	margin-bottom:3px;
+}
+
+#pcEnviarMensagem input[type=button]{
+	background-color: #FFF;
+	border:solid 3px #336699;	
+	font-weight:bold;
+	padding:3px;
+}
+
+#pcDivDestinatarios {
+  position:absolute;
+  width:400px;
+  min-height:18px;
+  background-color:#FFF;
+  border:solid 2px #336699;	
+  display:none;
+}
+
+#pcDestinatariosMensagem {
+    background-color:#FFC;
+    border:solid 1px #336699;
+    width:396px; 
+    padding:2px;
+    margin:0px 0px 2px 155px;  	
+}
+
+#pcDestinatariosMensagem ul{
+    margin:0;
+    padding:0;
+}
+
+#pcDestinatariosMensagem li{
+    float:left;
+    list-style:none;    	
+    padding:2px;
+    border:solid 1px #000;
+    margin:1px;
+    font-weight:bold;
+    background-color:#F5F5F5;
+    color: #000;
+}
+
+#pcDestinatariosMensagem li a {
+    text-decoration:none;
+    color:#990000;	
+}
+
+.slcDestinatario{
+	height:100px;
+	overflow-y:scroll;
+	border:1px solid #000000;
+	margin:2px;
+}
+
+.pcVisualizarMensagemUnica label{
+    width:150px;
+	float:left;
+	font-weight:bold;
+	text-align:right;
+	margin-right:5px;
+	margin-bottom:3px;
+}
+
+.pcVisualizarMensagemUnica p.float {
+    border-bottom: dashed #336699 1px;
+    margin-left: 150px;
+    width: 800px;
+    color:#000000;
+}
+
+#alertasPainelControle #pcBodyAlertas, #pcTIManager, #painelControle #pcTIManager{
+    height:240px;	
+    overflow-y:scroll;
+}
+
+#alertasPainelControle ul li{
+    list-style:none;
+    border-bottom:1px solid #CCC;
+    display:block;
+    position:relative;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+#alertasPainelControle ul li:hover{
+    background-color:#f9f9f9;	
+}
+
+#pcTICOntent div{overflow-y:scroll;height:220px;}
+
+#pcTICOntent h3{
+   color:#336699;
+   position:relative; 	
+}
+
+#pcTICOntent ul{margin-top:10px;}
+
+#pcTICOntent ul li {
+    list-style:none;	
+    float:left;
+    margin-right:5px;
+    cursor:pointer;
+    padding:5px;
+    vertical-align:middle;
+    width:360px;
+}
+
+#pcTICOntent ul li:hover{
+    background-color:#f2f2f2;
+}
+
+#pcTICOntent ul li img{
+    border:solid 1px #336699;
+    padding:5px;
+    float:left;
+    margin-bottom:3px;
+    margin-right:3px;	
+}
+
+#pcTICOntent ul li p {
+    line-height:15px;
+    font-size:11px;	
+    word-wrap:break-word;
+}
+#pcTICOntent div p a{
+    text-decoration:none;font-size:14px;font-weight:bold;color:#333;margin-top:0px;
+}
+#pcTICOntent div p a:hover,#pcTICOntent div p a.pcSetoresAgencia:hover{
+     color:#336699;   	
+}
+
+#pcTICOntent div p a.pcSetoresAgencia{
+    color:#990000;	
+}
+
+#pcTiPainel ul li {
+    list-style:none;
+    
+    width:85px;
+    text-align:center;
+    padding:3px;
+    float:left;
+    margin-right:2px;
+    margin-left:2px;
+    margin-bottom:2px;	
+    height:90px;
+}
+
+#pcTiPainel ul li a{
+    font-weight:bold;	
+}
+
+#pcTiPainel ul li:hover {
+    background-color:#f2f2f2;
+}
+
+#pcAbaAcessoSGI > div{
+    float: left;
+    padding: 5px;
+}
+
+#pcAbaAcessoSGI > div ul{
+    margin: 0;
+    padding: 0;
+}
+
+#pcAbaAcessoSGI > div ul li{
+    list-style: none;
+    margin-bottom: 3px;
+}
+
+#pcAbaAcessoSGI > div ul#pcTIABAmenu li a{
+    font-weight: bold;
+    background-color: #f2f2f2;
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+}
+
+#PcontainerCOnfiguracoes{
+    padding:5px;	
+}
+
+#PcontainerCOnfiguracoes #Pleft{
+    float:left;
+    width:20%;
+
+}
+
+#PcontainerCOnfiguracoes #Pleft ul{
+    margin:0;
+    padding:0;	
+}
+
+#PcontainerCOnfiguracoes #Pleft ul li{
+    list-style:none;
+    margin-bottom:2px;
+}
+
+#PcontainerCOnfiguracoes #Pleft ul li a{
+     text-decoration:none;
+     display:block;
+     padding:5px;
+     background-color:#CCC;	
+}
+
+#PcontainerCOnfiguracoes #Pright{
+    float:left;
+    width:77%;
+    text-align:left;
+    border:solid 1px #000;
+    margin-left:1.5%;
+    padding:5px;
+}
+
+#PcontainerCOnfiguracoes #Pright .form_padrao{
+    margin-left:30px;	
+}
+

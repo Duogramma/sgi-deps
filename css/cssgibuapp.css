@@ -1,0 +1,118 @@
+.link {
+	color:#000;
+	text-decoration:none;
+}
+
+.link:hover{
+	color:#D76B00;
+}
+.numero_estatistica{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#AE5700;
+	font-size:14px;
+	margin-left:10px;
+}
+.tipo_estatistica{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#666;
+	font-size:12px;
+}
+.titulo_estatistica{
+	font-weight:bold;
+	font-size:18px;
+	color:#C10000;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size-adjust:inherit;
+}
+#detalhesDIV{
+	width:600px;
+	border:solid;
+	margin:auto;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#detalhesLOG{
+	color:#666;
+	font-variant:small-caps;
+	font-size:13px;
+}
+#detalhesLOG strong{
+	color:#A60000;
+}
+a{
+	color:#000;
+	text-decoration:none;
+}
+a:hover{
+	color:#D76B00;
+}
+.duvida{
+	width:700px;
+	margin-left:55px;
+	border:solid 2px;
+	border-radius: 0.2em;
+	border-color:#222345;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:11px;
+}
+.duvida strong{
+	color:#990000;
+	font-size:13px;
+	letter-spacing:-0.2px;
+}
+.duvida hr{
+	border-style:dotted;
+	color:#336699;
+}
+.duvida fieldset{
+	border-style:solid 1px;
+	border-color:#336699;
+	border-radius:0.3em;
+	width:653px;	
+	margin-left:13px;
+	float:left;
+	background-color:#E9E9E9
+}
+.duvida fieldset span{
+	font-weight:bold;
+	font-size:10px;
+	color:#990000;
+	margin-left:4px;
+}
+.duvida fieldset legend{
+	background-color:#FFF;
+	color:#811702;
+	border-bottom:solid 1px;
+	border-left:solid 1px;
+	border-right:solid 1px;
+	border-color:#336699;
+	border-bottom-right-radius: 0.3em;
+	border-bottom-left-radius: 0.3em;
+	margin-top:14px;
+	font-weight:bold;
+	font-size:10px;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+.admnt{
+	style="font-size:13px; 
+	font-family: Geneva, sans-serif; 
+	letter-spacing:-1px; 
+	font-weight:bold;
+	color:#004800;
+	cursor:pointer;
+	margin-left:100px;
+}
+.admnt:hover{
+	style="font-size:13px; 
+	font-family: Geneva, sans-serif; 
+	letter-spacing:-1px; 
+	font-weight:bold;
+	color:#811702;
+	cursor:pointer;
+	margin-left:100px;
+}
+.clear{
+	width:700px;
+	height:30px;
+}
