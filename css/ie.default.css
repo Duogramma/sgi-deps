@@ -1,0 +1,219 @@
+
+body {
+	margin: 20px;
+	background: #FFFFFF url(/guarida/images/img1.gif);
+	font: normal small Arial, Helvetica, sans-serif;
+	color: #000000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+/*	text-transform: uppercase;*/
+	color: #FFFFFF;
+}
+
+
+p, ul, ol, blockquote {
+	margin-top: 0;
+}
+
+a {
+	color: #000000;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #008000;
+}
+
+img {
+	border: none;
+}
+
+/* Header */
+
+#header {
+	width: 490px;
+	height: 145px;
+	margin: auto; 
+	background: #5174CC url(/guarida/images/img2.gif) repeat-x;
+	border: 5px solid #FFFFFF;
+	border-bottom: none;
+}
+
+#header h1 {
+	text-align: left;
+	margin: 0 10px auto;
+	position:relative;
+	top:-35px;
+	font-size: 20px;
+}
+
+#header h2 {
+	text-align: left;
+	margin: 10px 10px auto;
+	position:relative;
+	top:-35px;
+	font-size: 14px;
+}
+	
+#header h3 {
+	text-align: right;
+	position:relative;
+	top:-10px;
+	font-family: arial;
+	font-size: 16px;
+}
+
+#header a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#logo {
+	height: 94px;
+    position: relative;
+    top: 28px;
+    left: 2px;
+    margin:0 auto -30px;
+}
+
+/* Menu */
+#menu {
+	float:center; 
+	width: 490px;
+	margin: 0 auto;
+	padding: 0;
+	background: #000000;
+	border: 5px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+/* remove all the bullets, borders and padding from the default list styling */
+#menu ul {padding:0; margin:0; list-style-type:none; height:36px; background:#000000;}
+
+/* style the sub-level lists */
+#menu ul ul {width: auto;}
+
+
+/* float the top list items to make it horizontal and a relative positon so that you can control the dropdown menu positon */
+#menu ul li {float:left;height:31px;line-height:28px;}
+
+/* style the sub level list items */
+#menu ul ul li {display:block; width: auto;height:auto;position:relative;line-height:1em; border-bottom:1px #000000 solid;}
+
+/* style the links for the top level */
+#menu a, #menu a:visited {display:block;float:left;height:100%;font-size:12px;text-decoration:none;color:#fff;background:#000000;padding:5px 18px 0 17px;}
+#menu a.current{background:#000000; }
+/* style the sub level links */
+#menu ul ul a, #menu ul ul a:visited {display:block;background:#000000; color:#fff;width:16em;height:100%;line-height:1em; padding:0.5em 1em;}
+#menu ul table ul a, #menu ul table ul a:visited  {width:14.em; w\idth:12em; } 
+
+
+/* style the table so that it takes no part in the layout - required for IE to work */
+#menu table {position:absolute; left:0; top:0; font-size:1em; z-index:-1; }
+#menu ul ul table {lef\t:-1px; }
+#menu ul ul table ul.left {margin-left:2px;}
+
+#menu li:hover {position:relative;}
+* html #menu a:hover {position:relative;}
+
+/* style the third level background */
+#menu ul ul ul a, #menu ul ul ul a:visited { background:#669966;}
+/* style the fourth level background */
+#menu ul ul ul ul a, #menu ul ul ul ul a:visited {background:#000000;}
+/* style the sub level 1 background */
+#menu ul :hover a.sub1 {background:#000000;}
+/* style the sub level 2 background */
+#menu ul ul :hover a.sub2 {background:#000000;}
+
+/* style the level hovers */
+/* first */
+#menu a:hover {background: #404040; color: #FFFFFF;}
+#menu :hover > a {background: #404040; color: #FFFFFF;}
+/* second */
+#menu ul ul a:hover{background: #404040; color: #FFFFFF;}
+#menu ul ul :hover > a {background: #404040; color: #FFFFFF;}
+/* third */
+#menu ul ul ul a:hover {background:#003300;}
+#menu ul ul ul :hover > a {background:#003300;}
+/* fourth */
+#menu ul ul ul ul a:hover {background:#eee;}
+
+
+/* hide the sub levels and give them a positon absolute so that they take up no room */
+#menu ul ul {visibility:hidden;position:absolute;height:0;top:35px;left:0;width:14em;}
+
+/* position the third level flyout menu */
+#menu ul ul ul{left:216px;top:0;width:auto;}
+
+/* position the third level flyout menu for a left flyout */
+#menu ul ul ul.left {left:-14em;}
+
+
+/* make the second level visible when hover on first level list OR link */
+#menu ul li:hover ul, #menu ul a:hover ul {visibility:visible; height:auto; padding-bottom:3em; background:transparent url(../../sac/images/trans.gif);}
+/* keep the third level hidden when you hover on first level list OR link */
+#menu ul :hover ul ul{visibility:hidden;}
+/* keep the fourth level hidden when you hover on second level list OR link */
+#menu ul :hover ul :hover ul ul{visibility:hidden;}
+/* make the third level visible when you hover over second level list OR link */
+#menu ul :hover ul :hover ul{visibility:visible;}
+/* make the fourth level visible when you hover over third level list OR link */
+#menu ul :hover ul :hover ul :hover ul {visibility:visible;}
+
+
+/* Splash */
+
+#splash {
+	width: 490px;
+	height: 157px;
+	margin: 0 auto;
+	border-left: 5px solid #FFFFFF;
+	border-right: 5px solid #FFFFFF;
+}
+
+/* Content */
+
+#content {
+	width: 490px;
+	margin: 0 auto;
+	background: #FFFFFF;
+	border: 5px solid #FFFFFF;
+}
+
+#content .title {
+	padding: 10px 20px;
+	background: #000000 url(/guarida/images/img4.gif) repeat-x left bottom;
+	font-size: 1em;
+}
+
+#content .story {
+	padding: 20px;
+	border: 2px solid #000000;
+}
+
+/* Footer */
+
+#footer {
+	width: 450px;
+	margin: 0 auto;
+	padding: 10px 20px;
+	background: #4E4E4E;
+	border: 5px solid #FFFFFF;
+	border-top: none;
+}
+
+#footer p {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-size: x-small;
+	color: #CCCCCC;
+}
+
+#footer a {
+	color: #CCCCCC;
+}
